@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Resmi - Intisari Clips v7.1</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#0f172a',
+                            accent: '#3b82f6',
+                            success: '#10b981',
+                            warning: '#f59e0b',
+                            danger: '#ef4444',
+                            light: '#f8fafc'
+                        }
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .video-overlay {
+            background: linear-gradient(0deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0) 100%);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .step-number {
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.05;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body class="text-brand-primary antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 glass-card py-4 px-6 border-b border-gray-200">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                    <i class="fas fa-bolt text-sm"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight">Intisari<span class="text-brand-accent">Clips</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#instalasi" class="hover:text-brand-accent transition">Instalasi</a>
+                <a href="#tutorial-clips" class="hover:text-brand-accent transition">Tutorial Clips</a>
+                <a href="#tutorial-notion" class="hover:text-brand-accent transition">Template Notion</a>
+                <a href="#faq" class="hover:text-brand-accent transition">Troubleshoot</a>
+            </div>
+            <a href="https://wa.me/628567870040" target="_blank" class="bg-brand-primary text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-black transition flex items-center shadow-lg">
+                <i class="fab fa-whatsapp mr-2 text-brand-success"></i> Support Admin
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-12 pb-16 px-6 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-blue-50 text-brand-accent px-4 py-1.5 rounded-full text-xs font-bold mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <span>OFFICIAL GUIDE v7.1 (WINDOWS/MacOS)</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                        Panduan Wajib <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 text-6xl">Aktivasi Mesin</span>
+                    </h1>
+                    <p class="text-gray-500 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Software ini menggunakan sistem <b>Smart Engine</b>. Anda wajib mengikuti langkah di bawah ini agar proses edit video berjalan lancar. <span class="text-brand-danger font-bold italic underline">Baca dulu sebelum membuka aplikasi!</span>
+                    </p>
+                    
+                    <!-- DOWNLOAD AREA HERO -->
+                    <div class="flex flex-col gap-4 mb-8">
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                            <a href="https://drive.google.com/file/d/1qxD3xzf9n-P5baroh64cj9MzYcnAsG4o/view?usp=sharing" target="_blank" class="bg-brand-accent hover:bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-blue-200 transition transform hover:scale-105 flex items-center justify-center">
+                                <i class="fas fa-cloud-download-alt mr-3"></i> Download Tools PC
+                            </a>
+                            <a href="https://drive.google.com/file/d/18jS-4EInJ2qy3hXXVXjQNECuUk48xfDM/view?usp=drive_link" target="_blank" class="bg-brand-success hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-green-200 transition transform hover:scale-105 flex items-center justify-center">
+                                <i class="fas fa-magic mr-3"></i> Prompt Analisa Konten
+                            </a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start">
+                            <button onclick="scrollToSection('instalasi')" class="bg-brand-primary text-white px-8 py-4 rounded-2xl font-bold hover:bg-black transition flex items-center justify-center w-full sm:w-auto">
+                                <i class="fas fa-arrow-down mr-3"></i> Mulai Instalasi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="animate-float bg-gradient-to-br from-blue-400 to-indigo-600 w-full aspect-video max-w-lg rounded-4xl shadow-2xl overflow-hidden p-1 relative z-10 mx-auto">
+                         <div class="w-full h-full bg-brand-primary rounded-4xl flex items-center justify-center text-white overflow-hidden relative border border-white/20">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" class="absolute w-full h-full object-cover opacity-30" alt="Workspace PC">
+                            <div class="relative z-20 text-center p-8">
+                                <i class="fas fa-desktop text-5xl mb-4 text-brand-accent"></i>
+                                <h4 class="text-xl font-bold">Smart Auto Cut v7.1</h4>
+                                <p class="text-xs text-blue-200 mt-2">Ready to Boost Your Content</p>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-accent opacity-20 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKFLOW STEPS (5 STEPS SECTION) -->
+    <section id="instalasi" class="py-20 bg-white px-6">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest bg-blue-100 px-4 py-1.5 rounded-full mb-3 inline-block">Prosedur Resmi</span>
+                <h2 class="text-4xl font-black mb-4">5 Tahapan Instalasi Utama</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Ikuti urutan ini dengan teliti untuk aktivasi sistem Smart Engine.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                <!-- STEP 1: DOWNLOAD -->
+                <div class="relative glass-card rounded-3xl p-8 border border-gray-100 flex flex-col md:flex-row gap-6 items-center group">
+                    <span class="step-number text-brand-accent">01</span>
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg flex-shrink-0">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold mb-1">Download Tools</h4>
+                        <p class="text-sm text-gray-500">Unduh file ZIP tools resmi dari Google Drive yang telah disediakan.</p>
+                        <a href="https://drive.google.com/file/d/1qxD3xzf9n-P5baroh64cj9MzYcnAsG4o/view?usp=sharing" target="_blank" class="text-xs font-bold text-brand-accent hover:underline mt-2 inline-block">Link Download Tools <i class="fas fa-external-link-alt ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- STEP 2: EKSTRAK -->
+                <div class="relative glass-card rounded-3xl p-8 border border-gray-100 flex flex-col md:flex-row gap-6 items-center group">
+                    <span class="step-number text-brand-danger">02</span>
+                    <div class="w-16 h-16 bg-brand-danger rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg flex-shrink-0">
+                        <i class="fas fa-file-archive"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold mb-1">Ekstrak File (WAJIB)</h4>
+                        <p class="text-sm text-gray-500 italic mb-2">"JANGAN jalankan aplikasi langsung dari dalam ZIP!"</p>
+                        <ul class="text-xs text-gray-600 space-y-1">
+                            <li>• Klik kanan pada file ZIP</li>
+                            <li>• Pilih <b>"Extract All..."</b> atau <b>"Ekstrak Semua..."</b></li>
+                            <li>• Klik Extract dan buka folder hasil ekstrasi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- STEP 3: INSTALASI MESIN -->
+                <div class="relative glass-card rounded-3xl p-8 border border-gray-100 flex flex-col md:flex-row gap-6 items-center group">
+                    <span class="step-number text-brand-success">03</span>
+                    <div class="w-16 h-16 bg-brand-success rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg flex-shrink-0">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold mb-1">Instalasi Mesin Utama</h4>
+                        <p class="text-sm text-gray-500">Klik 2x pada file <b class="text-brand-primary italic">RUN_INSTALASI.bat</b> di dalam folder hasil ekstrak.</p>
+                        <div class="bg-blue-50 px-3 py-2 rounded-lg mt-2 inline-block">
+                            <p class="text-[10px] text-blue-700 font-bold leading-tight">Wajib Klik <b>YES</b> saat izin Admin muncul. Tunggu sampai muncul tulisan <b>"INSTALASI SUKSES!"</b>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 4: PINDAHKAN KE DESKTOP -->
+                <div class="relative glass-card rounded-3xl p-8 border border-gray-100 flex flex-col md:flex-row gap-6 items-center group">
+                    <span class="step-number text-brand-warning">04</span>
+                    <div class="w-16 h-16 bg-brand-warning rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg flex-shrink-0">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold mb-1">Pindahkan ke Desktop</h4>
+                        <p class="text-sm text-gray-500">Klik kanan file 💎 <b class="text-brand-primary italic">AutoClipintisari.exe</b>, pilih <b>Copy/Cut</b>, lalu <b>Paste</b> di Desktop Laptop Anda.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 5: WINDOWS PROTECTED PC -->
+                <div class="relative glass-card rounded-3xl p-8 border-2 border-brand-accent/30 flex flex-col md:flex-row gap-6 items-center group bg-blue-50/30">
+                    <span class="step-number text-brand-accent">05</span>
+                    <div class="w-16 h-16 bg-brand-accent rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg flex-shrink-0">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold mb-1">Atasi "Windows protected your PC"</h4>
+                        <p class="text-sm text-gray-500">Saat pertama kali membuka aplikasi dari Desktop, Windows akan menampilkan kotak biru.</p>
+                        <div class="flex gap-4 mt-2">
+                            <div class="bg-white px-3 py-1 rounded border border-blue-200 text-[10px] font-bold">1. Klik "More info"</div>
+                            <div class="bg-white px-3 py-1 rounded border border-blue-200 text-[10px] font-bold">2. Klik "Run anyway"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TUTORIAL SECTION -->
+    <section id="tutorial-clips" class="py-20 px-6 bg-brand-light/50 border-t border-gray-200">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <h2 class="text-4xl font-black mb-2 tracking-tight">Library Tutorial</h2>
+                    <p class="text-gray-500">Wajib ditonton agar penguasaan tools Anda menjadi 100%.</p>
+                </div>
+                <div class="flex space-x-2">
+                    <a href="#tutorial-clips" class="bg-brand-accent text-white px-4 py-2 rounded-xl text-xs font-bold">Intisari Clips</a>
+                    <a href="#tutorial-notion" class="bg-gray-100 text-gray-500 px-4 py-2 rounded-xl text-xs font-bold hover:bg-gray-200">Template Notion</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1: Instalasi -->
+                <a href="https://youtu.be/FOva1PR-RmE" target="_blank" class="group bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 transition hover:shadow-2xl">
+                    <div class="aspect-video relative overflow-hidden bg-gray-200">
+                        <img src="https://img.youtube.com/vi/FOva1PR-RmE/mqdefault.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Tutorial Instalasi">
+                        <div class="absolute inset-0 video-overlay"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="bg-brand-accent text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter">Instalasi</span>
+                            <h4 class="font-extrabold text-lg leading-tight mt-2">Langkah Instalasi Lengkap</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Video 2: Tutorial A-Z -->
+                <a href="https://youtu.be/AMO7bx38CL0" target="_blank" class="group bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 transition hover:shadow-2xl">
+                    <div class="aspect-video relative overflow-hidden bg-gray-200">
+                        <img src="https://img.youtube.com/vi/AMO7bx38CL0/mqdefault.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Basic Course">
+                        <div class="absolute inset-0 video-overlay"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="bg-brand-warning text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter">Course Dasar</span>
+                            <h4 class="font-extrabold text-lg leading-tight mt-2">Tutorial A-Z Penggunaan Tools</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Video 3: Analisa Hook -->
+                <a href="https://youtu.be/4lwcU9OsQAA" target="_blank" class="group bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 transition hover:shadow-2xl border-2 border-brand-accent/30">
+                    <div class="aspect-video relative overflow-hidden bg-gray-200">
+                        <img src="https://img.youtube.com/vi/4lwcU9OsQAA/mqdefault.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Strategy Hook">
+                        <div class="absolute inset-0 video-overlay"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="bg-brand-danger text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter">Strategi</span>
+                            <h4 class="font-extrabold text-lg leading-tight mt-2">Analisa Hook & Buat Timestamp</h4>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-brand-accent text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">PENTING!</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TUTORIAL NOTION -->
+    <section id="tutorial-notion" class="py-20 px-6 bg-brand-primary">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-black text-white mb-6">Kelola Ribuan Konten <br><span class="text-brand-accent">Dengan Rapi</span></h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Gunakan Template Notion resmi kami untuk menjadwalkan konten, memantau performa, dan mengatur strategi hook tanpa pusing.</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center text-slate-300">
+                            <i class="fas fa-check-circle text-brand-success mr-3"></i>
+                            <span class="text-sm">Database Terintegrasi</span>
+                        </div>
+                        <div class="flex items-center text-slate-300">
+                            <i class="fas fa-check-circle text-brand-success mr-3"></i>
+                            <span class="text-sm">Template Hook & Caption Ready</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://www.notion.so" target="_blank" class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition flex items-center shadow-xl">
+                            <i class="fas fa-link mr-3"></i> Link Template Notion
+                        </a>
+                        <a href="https://youtu.be/C6rqFL7pVBI" target="_blank" class="bg-white/10 text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition flex items-center border border-white/20">
+                            <i class="fab fa-youtube mr-3 text-red-500"></i> Video Tutorial Notion
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                     <div class="bg-slate-800 rounded-3xl p-4 shadow-2xl border border-slate-700">
+                        <div class="aspect-video rounded-2xl overflow-hidden relative">
+                             <img src="https://img.youtube.com/vi/C6rqFL7pVBI/maxresdefault.jpg" class="w-full h-full object-cover opacity-60" alt="Notion Preview">
+                             <div class="absolute inset-0 flex items-center justify-center">
+                                <a href="https://youtu.be/C6rqFL7pVBI" target="_blank" class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl hover:scale-110 transition shadow-2xl shadow-white/20">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TROUBLESHOOTING (UPDATED) -->
+    <section id="faq" class="py-20 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-brand-danger uppercase tracking-widest bg-red-50 px-4 py-1.5 rounded-full mb-3 inline-block">Support Center</span>
+                <h2 class="text-3xl font-black">Troubleshooting</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Case A -->
+                <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100">
+                    <div class="w-10 h-10 bg-blue-500 text-white rounded-xl flex items-center justify-center mb-4 font-bold shadow-lg">A</div>
+                    <h4 class="font-bold mb-2">Windows protected your PC</h4>
+                    <p class="text-xs text-gray-500 mb-4 italic leading-relaxed">"Normal karena aplikasi dari developer independen. Ini 100% aman."</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-xs font-bold text-brand-accent">
+                            <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center mr-2 border border-blue-100">1</span> Klik "More info"
+                        </div>
+                        <div class="flex items-center text-xs font-bold text-brand-accent">
+                            <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center mr-2 border border-blue-100">2</span> Klik "Run anyway"
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case B -->
+                <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 border-2 border-brand-accent/20">
+                    <div class="w-10 h-10 bg-brand-warning text-white rounded-xl flex items-center justify-center mb-4 font-bold shadow-lg">B</div>
+                    <h4 class="font-bold mb-2">Video Gagal / Error FFmpeg</h4>
+                    <p class="text-xs text-gray-500 mb-4 leading-relaxed">Mesin data belum terinstal dengan benar ke sistem Windows.</p>
+                    <p class="text-[11px] font-bold text-brand-accent bg-blue-100/50 p-3 rounded-xl border border-blue-200">
+                        <i class="fas fa-redo-alt mr-1"></i> Ulangi Langkah 3 & jalankan <b class="underline italic">RUN_INSTALASI.bat</b> sebagai Admin.
+                    </p>
+                </div>
+
+                <!-- Remote Card -->
+                <div class="bg-brand-primary p-8 rounded-[2rem] shadow-xl text-white md:col-span-2 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-xl font-bold mb-2">Masih Ada Masalah?</h4>
+                        <p class="text-xs text-slate-400 italic">"Remote bantuan via Anydesk/UltraViewer tersedia untuk Mac & Windows."</p>
+                    </div>
+                    <a href="https://wa.me/628567870040" target="_blank" class="bg-brand-success text-white px-8 py-4 rounded-2xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-400/20 whitespace-nowrap">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Hubungi WA Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-gray-200 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div class="w-6 h-6 bg-brand-accent rounded flex items-center justify-center text-white text-[10px]">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span class="font-bold tracking-tight">Intisari Clips <span class="text-brand-accent">v7.1</span></span>
+            </div>
+            <p class="text-[10px] text-gray-300 uppercase tracking-widest leading-loose">Developed by Professionals for Efficiency. <br> &copy; 2026 Intisari Smart Tools.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
