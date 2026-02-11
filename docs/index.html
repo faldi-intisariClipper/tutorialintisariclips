@@ -20,7 +20,8 @@
                             success: '#10b981',
                             warning: '#f59e0b',
                             danger: '#ef4444',
-                            light: '#f8fafc'
+                            light: '#f8fafc',
+                            ai: '#8b5cf6' // Purple for AI features
                         }
                     },
                     borderRadius: {
@@ -84,6 +85,13 @@
             top: 1rem;
             font-weight: 900;
         }
+        
+        /* New AI Gradient Text */
+        .text-gradient-ai {
+            background: linear-gradient(to right, #c084fc, #db2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="text-brand-primary antialiased">
@@ -107,10 +115,14 @@
                 </div>
                 <span class="font-extrabold text-xl tracking-tight">Intisari<span class="text-brand-accent">Clips</span></span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold">
-                <a href="#windows-guide" class="hover:text-brand-accent transition">Windows Guide</a>
-                <a href="#macos-guide" class="hover:text-brand-accent transition">Mac OS Guide</a>
+            <div class="hidden lg:flex space-x-6 text-sm font-semibold items-center">
+                <a href="#windows-guide" class="hover:text-brand-accent transition">Windows</a>
+                <a href="#macos-guide" class="hover:text-brand-accent transition">Mac OS</a>
                 <a href="#tutorial-clips" class="hover:text-brand-accent transition">Tutorial</a>
+                <!-- New AI Tools Link in Navbar -->
+                <a href="https://gemini.google.com/gem/1on4dsBC62Q2chNbsU5GQZj8I5oWMoMXa?usp=sharing" target="_blank" class="text-brand-ai hover:text-purple-700 transition flex items-center">
+                    <i class="fas fa-robot mr-1.5"></i> AI Tools
+                </a>
                 <a href="#faq" class="hover:text-brand-accent transition">Troubleshoot</a>
             </div>
             <a href="https://wa.me/628567870040" target="_blank" class="bg-brand-primary text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-black transition flex items-center shadow-lg">
@@ -240,7 +252,7 @@
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto italic">Kuasai teknik editing otomatis melalui panduan mendalam di bawah ini.</p>
             </div>
 
-            <!-- Video Block 1 -->
+            <!-- Video Block 1: Basic Tutorial -->
             <div class="flex flex-col lg:flex-row gap-16 items-center mb-24">
                 <div class="lg:w-1/2 order-2 lg:order-1">
                     <span class="text-brand-warning font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Masterclass 01</span>
@@ -263,6 +275,36 @@
                      </div>
                 </div>
             </div>
+
+            <!-- Video Block 2: Gemini AI Tutorial (NEW) -->
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center mb-12">
+                <div class="lg:w-1/2">
+                    <span class="text-brand-ai font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Masterclass 02 • AI Update</span>
+                    <h2 class="text-3xl lg:text-4xl font-black text-white mb-6">Intisari <span class="text-gradient-ai">Viral Lens</span></h2>
+                    <p class="text-slate-400 mb-8 text-lg leading-relaxed">Analisa hook dan strategi video viral secara otomatis menggunakan Custom Gemini kami. Tidak perlu prompt manual, cukup copy-paste link!</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="openVideo('xnal92HvK5E')" class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition flex items-center shadow-xl">
+                            <i class="fas fa-play mr-2"></i> Tonton Tutorial
+                        </button>
+                        <a href="https://gemini.google.com/gem/1on4dsBC62Q2chNbsU5GQZj8I5oWMoMXa?usp=sharing" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition flex items-center shadow-xl shadow-purple-900/50">
+                            <i class="fas fa-robot mr-2"></i> Akses Gemini AI
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                     <div class="bg-slate-800 rounded-4xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group" onclick="openVideo('xnal92HvK5E')">
+                        <div class="aspect-video rounded-3xl overflow-hidden relative">
+                             <img src="https://img.youtube.com/vi/xnal92HvK5E/maxresdefault.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Tutorial Gemini">
+                             <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-20 h-20 bg-purple-600/80 backdrop-blur-md rounded-full flex items-center justify-center text-white text-2xl group-hover:bg-purple-500 transition shadow-lg shadow-purple-500/50">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
