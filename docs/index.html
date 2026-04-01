@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panduan Resmi - Intisari Clips Terbaru</title>
-    <!-- Tailwind CSS -->
+    <title>Member Area - Intisari Clips Ultimate</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -21,7 +19,7 @@
                             warning: '#f59e0b',
                             danger: '#ef4444',
                             light: '#f8fafc',
-                            ai: '#8b5cf6' // Purple for AI features
+                            ai: '#8b5cf6' 
                         }
                     },
                     borderRadius: {
@@ -76,17 +74,6 @@
             background: radial-gradient(circle at top right, #1e293b, #0f172a);
         }
 
-        .step-number {
-            font-size: 4rem;
-            line-height: 1;
-            opacity: 0.05;
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            font-weight: 900;
-        }
-        
-        /* New AI Gradient Text */
         .text-gradient-ai {
             background: linear-gradient(to right, #c084fc, #db2777);
             -webkit-background-clip: text;
@@ -96,7 +83,6 @@
 </head>
 <body class="text-brand-primary antialiased">
 
-    <!-- VIDEO MODAL -->
     <div id="videoModal" class="modal-overlay" onclick="closeVideo()">
         <div class="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
             <button onclick="closeVideo()" class="absolute top-4 right-4 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center backdrop-blur-md transition">
@@ -106,7 +92,6 @@
         </div>
     </div>
 
-    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 glass-card py-4 px-6 border-b border-gray-200">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -116,58 +101,50 @@
                 <span class="font-extrabold text-xl tracking-tight">Intisari<span class="text-brand-accent">Clips</span></span>
             </div>
             <div class="hidden lg:flex space-x-6 text-sm font-semibold items-center">
-                <a href="#windows-guide" class="hover:text-brand-accent transition">Windows</a>
-                <a href="#macos-guide" class="hover:text-brand-accent transition">Mac OS</a>
-                <a href="#tutorial-clips" class="hover:text-brand-accent transition">Tutorial</a>
-                <!-- New AI Tools Link in Navbar -->
+                <a href="#download-hub" class="hover:text-brand-accent transition">Download & Install</a>
+                <a href="#tutorial-clips" class="hover:text-brand-accent transition">Video Masterclass</a>
                 <a href="https://gemini.google.com/gem/1on4dsBC62Q2chNbsU5GQZj8I5oWMoMXa?usp=sharing" target="_blank" class="text-brand-ai hover:text-purple-700 transition flex items-center">
-                    <i class="fas fa-robot mr-1.5"></i> AI Tools
+                    <i class="fas fa-robot mr-1.5"></i> Custom AI
                 </a>
                 <a href="#faq" class="hover:text-brand-accent transition">Troubleshoot</a>
             </div>
             <a href="https://wa.me/628567870040" target="_blank" class="bg-brand-primary text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-black transition flex items-center shadow-lg">
-                <i class="fab fa-whatsapp mr-2 text-brand-success"></i> Hubungi Admin
+                <i class="fab fa-whatsapp mr-2 text-brand-success"></i> Support Admin
             </a>
         </div>
     </nav>
 
-    <!-- WINDOWS SECTION -->
-    <section id="windows-guide" class="pt-12 pb-20 px-6 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section id="download-hub" class="pt-12 pb-20 px-6 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
         <div class="container mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 text-center lg:text-left">
                     <div class="inline-flex items-center space-x-2 bg-blue-50 text-brand-accent px-4 py-1.5 rounded-full text-xs font-bold mb-6">
-                        <i class="fab fa-windows"></i>
-                        <span>WINDOWS VERSION</span>
+                        <i class="fab fa-github"></i>
+                        <span>OFFICIAL REPOSITORY</span>
                     </div>
                     <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
-                        Panduan <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 text-6xl">Instalasi Windows</span>
+                        Pusat Unduhan <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 text-6xl">Software Ultimate</span>
                     </h1>
                     <div class="mb-8">
                         <p class="text-gray-500 text-lg leading-relaxed">
-                            Siap mendominasi konten? Tonton video panduan di samping untuk proses instalasi Windows yang tepat.
+                            Unduh rilis terbaru Intisari Clips. Pastikan Anda mengunduh <b>kedua file ZIP</b> (App Utama & _internal) agar mesin Face AI dan Whisper dapat berjalan sempurna.
                         </p>
-                        <p class="text-brand-danger font-bold italic underline mt-1">
-                            Wajib disimak agar software berjalan lancar!
+                        <p class="text-brand-danger font-bold italic mt-2 bg-red-50 p-3 rounded-lg border border-red-100 inline-block text-sm">
+                            ⚠️ Penting: Ekstrak file _internal.zip, lalu pindahkan foldernya ke dalam folder utama aplikasi!
                         </p>
-                        <a href="https://drive.google.com/drive/folders/1qxD3xzf9n-P5baroh64cj9MzYcnAsG4o?usp=sharing" target="_blank" class="inline-flex items-center text-brand-accent font-bold hover:text-blue-700 transition mt-4 text-sm group">
-                            <i class="fas fa-folder-open mr-2 group-hover:animate-bounce"></i> Download semua bahan di sini
-                        </a>
                     </div>
                     
                     <div class="flex flex-col gap-4">
-                        <!-- Group 1: Installer & Extension -->
                         <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                            <a href="https://github.com/intisariapps/Intisari_Clips/releases" target="_blank" class="bg-brand-primary hover:bg-black text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none">
-                                <i class="fab fa-windows mr-3 text-xl"></i> Download Windows Version
+                            <a href="https://github.com/intisariapps-com/intisariclips/releases" target="_blank" class="bg-brand-primary hover:bg-black text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none">
+                                <i class="fab fa-github mr-3 text-xl"></i> Akses Halaman Rilis GitHub
                             </a>
-                            <a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc" target="_blank" class="bg-brand-warning hover:bg-amber-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none text-xs sm:text-sm">
-                                <i class="fas fa-cookie-bite mr-2"></i> Download Extension GET Cookies
+                            <a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc" target="_blank" class="bg-brand-warning hover:bg-amber-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none text-sm">
+                                <i class="fas fa-cookie-bite mr-2"></i> Ekstensi Get Cookies
                             </a>
                         </div>
                         
-                        <!-- Group 2: AI & Notion (Moved Here) -->
                         <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                             <a href="https://gemini.google.com/gem/1on4dsBC62Q2chNbsU5GQZj8I5oWMoMXa?usp=sharing" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none shadow-xl shadow-purple-200">
                                 <i class="fas fa-robot mr-3 text-lg"></i> Akses Intisari Viral Lens (AI)
@@ -180,11 +157,11 @@
                 </div>
                 
                 <div class="lg:w-1/2 w-full relative">
-                    <div onclick="openVideo('FOva1PR-RmE')" class="video-container-premium cursor-pointer bg-slate-900 rounded-4xl p-2 border-4 border-white shadow-2xl relative overflow-hidden group">
+                    <div onclick="openVideo('X5ii_itYOHk')" class="video-container-premium cursor-pointer bg-slate-900 rounded-4xl p-2 border-4 border-white shadow-2xl relative overflow-hidden group">
                         <div class="aspect-video rounded-3xl overflow-hidden relative">
-                            <img src="https://img.youtube.com/vi/FOva1PR-RmE/maxresdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-700" alt="Video Windows">
+                            <img src="https://img.youtube.com/vi/X5ii_itYOHk/maxresdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-700" alt="Video Instalasi">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                                <h3 class="text-white text-2xl font-black leading-tight">Tutorial Instalasi Windows</h3>
+                                <h3 class="text-white text-2xl font-black leading-tight">Mulai Dari Sini: Cara Install yang Benar</h3>
                             </div>
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <div class="w-20 h-20 bg-brand-accent text-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover:scale-110 transition-transform">
@@ -198,167 +175,128 @@
         </div>
     </section>
 
-    <!-- MAC OS SECTION -->
-    <section id="macos-guide" class="py-24 px-6 bg-slate-100">
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-                <div class="lg:w-1/2 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-slate-200 text-slate-700 px-4 py-1.5 rounded-full text-xs font-bold mb-6">
-                        <i class="fab fa-apple"></i>
-                        <span>MAC OS VERSION</span>
-                    </div>
-                    <h2 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
-                        Panduan <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900 text-6xl">Instalasi Mac Os</span>
-                    </h2>
-                    <div class="mb-8">
-                        <p class="text-gray-500 text-lg leading-relaxed">
-                            Khusus pengguna Apple Silicon & Intel. Tonton panduan instalasi Mac OS agar tidak terjadi kendala keamanan (Gatekeeper).
-                        </p>
-                        <p class="text-brand-danger font-bold italic underline mt-1">
-                            Wajib disimak agar software berjalan lancar!
-                        </p>
-                    </div>
-                    
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                        <a href="https://github.com/intisariapps/Intisari_Clips-MacOs/releases" target="_blank" class="bg-slate-800 hover:bg-black text-white px-10 py-5 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none">
-                            <i class="fab fa-apple mr-3 text-xl"></i> Download Mac Os Version
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1qxD3xzf9n-P5baroh64cj9MzYcnAsG4o?usp=sharing" target="_blank" class="bg-white border-2 border-slate-300 text-slate-700 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center justify-center flex-1 lg:flex-none">
-                            <i class="fas fa-folder mr-3"></i> Download Bahan Mac
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2 w-full relative">
-                    <div onclick="openVideo('FOva1PR-RmE')" class="video-container-premium cursor-pointer bg-slate-900 rounded-4xl p-2 border-4 border-white shadow-2xl relative overflow-hidden group">
-                        <div class="aspect-video rounded-3xl overflow-hidden relative">
-                            <img src="https://img.youtube.com/vi/FOva1PR-RmE/maxresdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-700" alt="Video Mac OS">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                                <h3 class="text-white text-2xl font-black leading-tight">Tutorial Instalasi Mac OS</h3>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-20 h-20 bg-slate-500 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-play ml-1"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEO TUTORIAL SECTION -->
     <section id="tutorial-clips" class="py-24 px-6 section-dark relative overflow-hidden">
         <div class="absolute top-0 left-0 w-1/2 h-full bg-blue-600 opacity-5 blur-[120px]"></div>
-        <div class="container mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl lg:text-5xl font-black text-white mb-6">Eksplorasi <span class="text-brand-accent">Fitur Mesin</span></h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto italic">Kuasai teknik editing otomatis melalui panduan mendalam di bawah ini.</p>
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-white mb-6">Kurikulum <span class="text-brand-accent">Masterclass</span></h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto italic">Tonton secara berurutan untuk menguasai workflow otomatisasi video tingkat tinggi.</p>
             </div>
 
-            <!-- Video Block 1: Basic Tutorial -->
-            <div class="flex flex-col lg:flex-row gap-16 items-center mb-24">
-                <div class="lg:w-1/2 order-2 lg:order-1">
-                    <span class="text-brand-warning font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Masterclass 01</span>
-                    <h2 class="text-3xl lg:text-4xl font-black text-white mb-6">Panduan Operasional <br><span class="text-brand-accent">Dari Nol Sampai Mahir</span></h2>
-                    <p class="text-slate-400 mb-8 text-lg leading-relaxed">Pahami setiap tombol, menu, dan logika kerja Smart Engine kami.</p>
-                    <button onclick="openVideo('AMO7bx38CL0')" class="bg-white text-brand-primary px-10 py-5 rounded-2xl font-bold hover:bg-gray-100 transition flex items-center shadow-2xl">
-                        <i class="fas fa-play-circle mr-3 text-xl"></i> Tonton Tutorial Sekarang
-                    </button>
-                </div>
-                <div class="lg:w-1/2 w-full order-1 lg:order-2">
-                     <div class="bg-slate-800 rounded-4xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group" onclick="openVideo('AMO7bx38CL0')">
-                        <div class="aspect-video rounded-3xl overflow-hidden relative">
-                             <img src="https://img.youtube.com/vi/AMO7bx38CL0/maxresdefault.jpg" class="w-full h-full object-cover opacity-60" alt="Tutorial A-Z">
-                             <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white text-2xl group-hover:bg-white group-hover:text-brand-primary transition">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                             </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-800 rounded-3xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group hover:border-brand-warning transition duration-300" onclick="openVideo('-UtSmwa5Ebs')">
+                    <div class="aspect-video rounded-2xl overflow-hidden relative mb-4">
+                        <img src="https://img.youtube.com/vi/-UtSmwa5Ebs/maxresdefault.jpg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-500" alt="Fase 0">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-brand-warning/90 backdrop-blur-md rounded-full flex items-center justify-center text-white text-xl group-hover:scale-110 transition shadow-lg">
+                                <i class="fas fa-play"></i>
+                            </div>
                         </div>
-                     </div>
-                </div>
-            </div>
-
-            <!-- Video Block 2: Gemini AI Tutorial (NEW) -->
-            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center mb-12">
-                <div class="lg:w-1/2">
-                    <span class="text-brand-ai font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Masterclass 02 • AI Update</span>
-                    <h2 class="text-3xl lg:text-4xl font-black text-white mb-6">Intisari <span class="text-gradient-ai">Viral Lens</span></h2>
-                    <p class="text-slate-400 mb-8 text-lg leading-relaxed">Analisa hook dan strategi video viral secara otomatis menggunakan Custom Gemini kami. Tidak perlu prompt manual, cukup copy-paste link!</p>
-                    <div class="flex flex-wrap gap-4">
-                        <button onclick="openVideo('xnal92HvK5E')" class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition flex items-center shadow-xl">
-                            <i class="fas fa-play mr-2"></i> Tonton Tutorial
-                        </button>
-                        <a href="https://gemini.google.com/gem/1on4dsBC62Q2chNbsU5GQZj8I5oWMoMXa" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition flex items-center shadow-xl shadow-purple-900/50">
-                            <i class="fas fa-robot mr-2"></i> Akses Gemini AI
-                        </a>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <span class="text-brand-warning font-bold text-[10px] uppercase tracking-wider mb-2 block">Wajib Ditonton Pertama!</span>
+                        <h3 class="text-white font-bold text-lg leading-tight mb-2">Fase 0: Bypass 403 (Anti-Bot) YouTube</h3>
+                        <p class="text-slate-400 text-sm">Cara memasang cookies.txt agar mesin tidak diblokir saat mendownload video massal.</p>
                     </div>
                 </div>
-                <div class="lg:w-1/2 w-full">
-                     <div class="bg-slate-800 rounded-4xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group" onclick="openVideo('xnal92HvK5E')">
-                        <div class="aspect-video rounded-3xl overflow-hidden relative">
-                             <img src="https://img.youtube.com/vi/xnal92HvK5E/maxresdefault.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Tutorial Gemini">
-                             <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-20 h-20 bg-purple-600/80 backdrop-blur-md rounded-full flex items-center justify-center text-white text-2xl group-hover:bg-purple-500 transition shadow-lg shadow-purple-500/50">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                             </div>
-                        </div>
-                     </div>
-                </div>
-            </div>
 
+                <div class="bg-slate-800 rounded-3xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group hover:border-brand-accent transition duration-300" onclick="openVideo('X5ii_itYOHk')">
+                    <div class="aspect-video rounded-2xl overflow-hidden relative mb-4">
+                        <img src="https://img.youtube.com/vi/X5ii_itYOHk/maxresdefault.jpg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-500" alt="Fase 1">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-brand-accent/90 backdrop-blur-md rounded-full flex items-center justify-center text-white text-xl group-hover:scale-110 transition shadow-lg">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <span class="text-brand-accent font-bold text-[10px] uppercase tracking-wider mb-2 block">Langkah Awal</span>
+                        <h3 class="text-white font-bold text-lg leading-tight mb-2">Fase 1: Persiapan & Instalasi Software</h3>
+                        <p class="text-slate-400 text-sm">Panduan merakit _internal.zip dan memasang Chrome Extension Intisari Extractor.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-3xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group hover:border-purple-500 transition duration-300" onclick="openVideo('rVjxAQAPBoI')">
+                    <div class="aspect-video rounded-2xl overflow-hidden relative mb-4">
+                        <img src="https://img.youtube.com/vi/rVjxAQAPBoI/maxresdefault.jpg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-500" alt="Fase 2">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-purple-500/90 backdrop-blur-md rounded-full flex items-center justify-center text-white text-xl group-hover:scale-110 transition shadow-lg">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <span class="text-purple-400 font-bold text-[10px] uppercase tracking-wider mb-2 block">Konfigurasi Mesin</span>
+                        <h3 class="text-white font-bold text-lg leading-tight mb-2">Fase 2: Setup AI & Dynamic Workers</h3>
+                        <p class="text-slate-400 text-sm">Mengunduh plugin Whisper AI dan mengatur beban limit prosesor PC Anda.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-3xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group hover:border-green-500 transition duration-300" onclick="openVideo('yh8gNCT7d2M')">
+                    <div class="aspect-video rounded-2xl overflow-hidden relative mb-4">
+                        <img src="https://img.youtube.com/vi/yh8gNCT7d2M/maxresdefault.jpg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-500" alt="Fase 3">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-green-500/90 backdrop-blur-md rounded-full flex items-center justify-center text-white text-xl group-hover:scale-110 transition shadow-lg">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <span class="text-green-400 font-bold text-[10px] uppercase tracking-wider mb-2 block">Inti Otomatisasi</span>
+                        <h3 class="text-white font-bold text-lg leading-tight mb-2">Fase 3: Workflow Gemini & Extractor</h3>
+                        <p class="text-slate-400 text-sm">Mengirim prompt ke Custom Gemini dan melempar tugas langsung ke localhost PC.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-3xl p-3 shadow-2xl border border-slate-700 overflow-hidden cursor-pointer group hover:border-pink-500 transition duration-300" onclick="openVideo('wko3Kv21FNs')">
+                    <div class="aspect-video rounded-2xl overflow-hidden relative mb-4">
+                        <img src="https://img.youtube.com/vi/wko3Kv21FNs/maxresdefault.jpg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-500" alt="Fase 4">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-pink-500/90 backdrop-blur-md rounded-full flex items-center justify-center text-white text-xl group-hover:scale-110 transition shadow-lg">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <span class="text-pink-400 font-bold text-[10px] uppercase tracking-wider mb-2 block">Sentuhan Akhir</span>
+                        <h3 class="text-white font-bold text-lg leading-tight mb-2">Fase 4: Kustomisasi Visual & Expert Tips</h3>
+                        <p class="text-slate-400 text-sm">Mendesain Global Preset (Font/Warna) dan memahami kinerja God Mode (Face AI).</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- NOTION SECTION -->
-    <section id="tutorial-notion" class="py-24 px-6 bg-brand-primary relative overflow-hidden">
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2 text-white">
-                    <h2 class="text-4xl font-black mb-6">Database Konten <br><span class="text-brand-accent">Anti Berantakan</span></h2>
-                    <p class="text-slate-400 mb-8 text-lg leading-relaxed">Gunakan Template Notion resmi untuk menjadwalkan konten tanpa pusing.</p>
-                    <a href="https://rune-paneer-933.notion.site/2f250fca7b2c80279942dfd024707c5b" target="_blank" class="bg-white text-brand-primary px-10 py-5 rounded-2xl font-bold hover:bg-gray-100 transition inline-flex items-center shadow-2xl">
-                        <i class="fas fa-link mr-3"></i> Ambil Template Notion
-                    </a>
-                </div>
-                <div class="lg:w-1/2 w-full">
-                     <div class="bg-slate-800 rounded-3xl p-4 shadow-2xl cursor-pointer" onclick="openVideo('C6rqFL7pVBI')">
-                        <div class="aspect-video rounded-2xl overflow-hidden relative">
-                             <img src="https://img.youtube.com/vi/C6rqFL7pVBI/maxresdefault.jpg" class="w-full h-full object-cover opacity-60" alt="Notion">
-                             <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-brand-primary text-2xl">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                             </div>
-                        </div>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-20 px-6 bg-white">
+    <section id="faq" class="py-20 px-6 bg-white border-t border-gray-100">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl font-black mb-12">Mengalami Kendala?</h2>
-            <div class="bg-red-50 p-8 rounded-4xl border-2 border-dashed border-red-200">
-                <p class="text-brand-danger font-bold text-lg mb-4 italic">"Video Gagal Render atau Error FFmpeg?"</p>
-                <p class="text-gray-600 mb-6">Pastikan folder tools sudah di-ekstrak sempurna. Klik kanan file <b>RUN_INSTALASI.bat</b> dan pilih <b>Run as Administrator</b>.</p>
-                <a href="https://wa.me/628567870040" target="_blank" class="bg-brand-success text-white px-8 py-4 rounded-2xl font-bold inline-flex items-center hover:scale-105 transition shadow-lg">
-                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Chat Admin (Support 24/7)
+            <h2 class="text-3xl font-black mb-12">Mengalami Kendala Teknis?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-10 text-left">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <h4 class="font-bold text-brand-primary mb-2">1. Mesin Gagal Berjalan (Error Path)</h4>
+                    <p class="text-sm text-gray-600">Pastikan Anda telah mengekstrak file <code class="bg-gray-200 px-1 rounded">_internal.zip</code> dan memindahkan folder <code class="bg-gray-200 px-1 rounded">_internal</code> tersebut <b>ke dalam</b> folder utama <code class="bg-gray-200 px-1 rounded">1_INTISARI-PUBLIC_STABLE</code>.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <h4 class="font-bold text-brand-primary mb-2">2. Download YouTube Mentok / Error 403</h4>
+                    <p class="text-sm text-gray-600">YouTube memblokir koneksi bot. Buka browser, gunakan ekstensi "Get cookies.txt", simpan file-nya, dan arahkan path Cookies di halaman Setting Dashboard.</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-8 rounded-4xl border-2 border-dashed border-blue-200">
+                <p class="text-brand-primary font-bold text-lg mb-4">Masih Butuh Bantuan?</p>
+                <p class="text-gray-600 mb-6">Tim dukungan teknis kami siap membantu Anda menyelesaikan masalah instalasi maupun konfigurasi software.</p>
+                <a href="https://wa.me/628567870040" target="_blank" class="bg-brand-primary text-white px-8 py-4 rounded-2xl font-bold inline-flex items-center hover:scale-105 transition shadow-lg">
+                    <i class="fab fa-whatsapp text-brand-success mr-2 text-xl"></i> Chat Support Member (24/7)
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="py-12 bg-white border-t">
         <div class="container mx-auto px-6 text-center text-gray-400">
-            <p>&copy; 2026 Intisari Smart Tools.</p>
+            <p>&copy; 2026 Intisari Clips by IntisariApps. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -381,6 +319,3 @@
     </script>
 </body>
 </html>
-
-
-
