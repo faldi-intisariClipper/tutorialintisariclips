@@ -128,23 +128,42 @@
                     </h1>
                     <div class="mb-8">
                         <p class="text-gray-500 text-lg leading-relaxed">
-                            Unduh rilis terbaru Intisari Clips. Pastikan Anda mengunduh <b>kedua file ZIP</b> (App Utama & _internal) agar mesin Face AI dan Whisper dapat berjalan sempurna.
+                            Unduh rilis terbaru Intisari Clips. Satu file ZIP sudah mencakup semua yang dibutuhkan, termasuk mesin Face AI dan Whisper.
                         </p>
-                        <p class="text-brand-danger font-bold italic mt-2 bg-red-50 p-3 rounded-lg border border-red-100 inline-block text-sm">
-                            ⚠️ Penting: Ekstrak file _internal.zip, lalu pindahkan foldernya ke dalam folder utama aplikasi!
-                        </p>
+                        <div class="mt-3">
+                            <span id="versionBadge" data-version="10.0.7" data-updated="" class="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-1.5 rounded-full text-xs font-bold">
+                                <i class="fas fa-circle text-xs"></i>
+                                <span>Latest: v10.0.7</span>
+                                <span class="text-gray-500 ml-1">(2026-05-18)</span>
+                            </span>
+                        </div>
                     </div>
                     
                     <div class="flex flex-col gap-4">
+                        <!-- Direct Download Buttons (updated by CI) -->
                         <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                            <a href="https://github.com/intisariapps-com/intisariclips/releases" target="_blank" class="bg-brand-primary hover:bg-black text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none">
-                                <i class="fab fa-github mr-3 text-xl"></i> Akses Halaman Rilis GitHub
+                            <a id="downloadWindowsBtn"
+                               href="https://intisaribucket.intisariapps.com/IntisariClips-windows-latest.zip"
+                               class="bg-brand-primary hover:bg-black text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none">
+                                <i class="fab fa-windows mr-3 text-xl"></i>
+                                Download Windows <span id="windowsSize" class="text-sm text-blue-200 ml-2">(38.5 MB)</span>
                             </a>
-                            <a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc" target="_blank" class="bg-brand-warning hover:bg-amber-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none text-sm">
+                            <a id="downloadMacosBtn"
+                               href="https://intisaribucket.intisariapps.com/IntisariClips-mac-arm64-latest.zip"
+                               class="bg-slate-700 hover:bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none">
+                                <i class="fab fa-apple mr-3 text-xl"></i>
+                                Download macOS <span id="macosSize" class="text-sm text-slate-300 ml-2">(39.8 MB)</span>
+                            </a>
+                        </div>
+                        <!-- Secondary links -->
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                            <a href="https://github.com/intisariapps-com/intisariclips/releases" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-2xl font-bold transition flex items-center justify-center text-sm">
+                                <i class="fab fa-github mr-2"></i> Semua Rilis GitHub
+                            </a>
+                            <a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc" target="_blank" class="bg-brand-warning hover:bg-amber-600 text-white px-6 py-3 rounded-2xl font-bold shadow-xl transition transform hover:scale-105 flex items-center justify-center text-sm">
                                 <i class="fas fa-cookie-bite mr-2"></i> Ekstensi Get Cookies
                             </a>
                         </div>
-                        
                         <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                             <a href="https://gemini.google.com/gem/1on4dsBC62Q2chNbsU5GQZj8I5oWMoMXa?usp=sharing" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition transform hover:scale-105 flex items-center justify-center flex-1 lg:flex-none shadow-xl shadow-purple-200">
                                 <i class="fas fa-robot mr-3 text-lg"></i> Akses Intisari Viral Lens (AI)
@@ -316,6 +335,36 @@
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
+
+        async function syncVersionDynamic() {
+            try {
+                const badge = document.getElementById('versionBadge');
+                if (!badge) return;
+                const lastUpdate = new Date(badge.dataset.updated || 0);
+                const isStale = (Date.now() - lastUpdate) > 24 * 60 * 60 * 1000;
+                if (!isStale) return;
+                const res = await fetch('https://intisaribucket.intisariapps.com/version.json', { cache: 'no-store' });
+                if (!res.ok) return;
+                const v = await res.json();
+                badge.querySelector('span:first-of-type').textContent = `Latest: v${v.version}`;
+                badge.querySelector('span:last-of-type').textContent = `(${v.released})`;
+                badge.dataset.version = v.version;
+                badge.dataset.updated = new Date().toISOString();
+                const winBtn = document.getElementById('downloadWindowsBtn');
+                const macBtn = document.getElementById('downloadMacosBtn');
+                if (winBtn && v.platforms?.windows) {
+                    winBtn.href = v.platforms.windows.url;
+                    const sz = document.getElementById('windowsSize');
+                    if (sz) sz.textContent = `(${v.platforms.windows.size_mb} MB)`;
+                }
+                if (macBtn && v.platforms?.mac_arm64) {
+                    macBtn.href = v.platforms.mac_arm64.url;
+                    const sz = document.getElementById('macosSize');
+                    if (sz) sz.textContent = `(${v.platforms.mac_arm64.size_mb} MB)`;
+                }
+            } catch (e) { console.warn('Version sync failed:', e); }
+        }
+        window.addEventListener('load', syncVersionDynamic);
     </script>
 </body>
 </html>
